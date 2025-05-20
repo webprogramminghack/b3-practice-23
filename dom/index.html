@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="heading">hello world</h1>
+      <p>this is dom example</p>
+    </div>
+    <button id="btn">ubah teks</button>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <input type="password" name="password" id="password" />
+    <button id="btn-pass">show password</button>
+    <script>
+      //   const heading = document.getElementById("heading");
+      // heading.style.color = "red";
+      //   heading.innerHTML = "isinya diubah";
+      //   const container = document.getElementById("container");
+      //   container.removeChild(heading);
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        const heading = document.getElementById("heading");
+        heading.style.color = "red";
+        heading.innerHTML = "isinya diubah";
+      });
+
+      const passwordButton = document.getElementById("btn-pass");
+      passwordButton.addEventListener("click", () => {
+        const password = document.getElementById("password");
+        if (password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>
